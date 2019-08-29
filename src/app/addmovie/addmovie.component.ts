@@ -18,6 +18,10 @@ export class AddmovieComponent implements OnInit {
     this.apiservice.insertmoviedata(data.value).subscribe((response:Array<object>)=>{
       console.log(response);
       this.mydata=response;
+      if(response.length > 0)
+      {
+        alert('Successfully Inserted');
+      }
     });
   }
 

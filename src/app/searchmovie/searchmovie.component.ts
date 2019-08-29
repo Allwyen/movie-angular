@@ -12,11 +12,18 @@ export class SearchmovieComponent implements OnInit {
 
   constructor(private apiservice:ApiService) { }
 
+  status=false;
+
   onSubmit(data:NgForm)
   {
     this.apiservice.searchmoviedata(data.value).subscribe((response:Array<object>)=>{
       console.log(response);
       this.mydata=response;
+
+      if(response.length>0)
+      {
+        this.status=true;
+      }
     });
   }
 
