@@ -15,10 +15,10 @@ export class AddmovieComponent implements OnInit {
 
   onSubmit(data:NgForm)
   {
-    this.apiservice.insertmoviedata(data.value).subscribe((response:Array<object>)=>{
+    this.apiservice.insertmoviedata(data.value).subscribe((response:any)=>{
       console.log(response);
       this.mydata=response;
-      if(response.length > 0)
+      if(response._id != null)
       {
         alert('Successfully Inserted');
       }

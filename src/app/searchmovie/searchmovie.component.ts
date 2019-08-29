@@ -24,6 +24,9 @@ export class SearchmovieComponent implements OnInit {
       {
         this.status=true;
       }
+      else{
+        alert('Movie Data Not Available');
+      }
     });
   }
 
