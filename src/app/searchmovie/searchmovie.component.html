@@ -1,0 +1,15 @@
+<form (ngSubmit)=onSubmit(f) #f="ngForm">
+    <table class="table">
+      <tr><td>Name</td><td><input type="text" class="form-control" name="mname" id="" ngModel></td></tr>
+      <tr><td></td><td><input type="submit" class="btn btn-primary" value="Search Movie"></td></tr>
+    </table>
+  </form>
+
+  <table class="table">
+    <div *ngFor="let data of mydata">
+        <tr><td>Movie Name</td><td>{{data.mname}}</td></tr>
+        <tr><td>Actor</td><td>{{data.mactor}}</td></tr>
+        <tr><td>Actress</td><td>{{data.mactress}}</td></tr>
+        <tr><td>Director</td><td>{{data.mdirector}}</td></tr>
+    </div>
+  </table>
